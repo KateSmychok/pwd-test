@@ -1,0 +1,47 @@
+@import '../../scss-styles/styles';
+
+.counter {
+  min-width: 156px;
+  height: 44px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+}
+
+.counterBtn {
+  @extend %button;
+  width: 44px;
+  height: 44px;
+  border-radius: 3px;
+  padding: 0;
+  transition: background-color 0.5s ease-in-out;
+
+  &Inc {
+    background: #F8F8F8 url('../../images/plus-icon.svg') no-repeat center center;
+
+    &:hover {
+      background: #F2F2F2 url('../../images/plus-icon-hover.svg') no-repeat center center;
+    }
+
+    &:active {
+      background: #EDEDED url('../../images/plus-icon-active.svg') no-repeat center center;
+    }
+  }
+
+  &Dec {
+    background: #F8F8F8 url('../../images/minus-icon.svg') no-repeat center center;
+  }
+
+  &:hover {
+    background: #F2F2F2 url('../../images/minus-icon-hover.svg') no-repeat center center;
+  }
+
+  &:active {
+    background: #EDEDED url('../../images/minus-icon-active.svg') no-repeat center center;
+  }
+}
+
+.score {
+  @extend %text;
+  padding: 0 17px;
+}

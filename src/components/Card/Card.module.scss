@@ -1,0 +1,119 @@
+@import '../../scss-styles/styles';
+
+.card {
+  width: 305px;
+  height: 416px;
+  display: flex;
+  flex-direction: column;
+
+  &:hover {
+    @extend %link;
+  }
+}
+
+.imageArea {
+  width: 100%;
+  height: 240px;
+  padding: 20px 16px;
+  box-sizing: border-box;
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+
+.image {
+  object-fit: contain;
+}
+
+.baseLikeBtn {
+  @extend %button;
+  width: 24px;
+  height: 24px;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.notSavedToFavorite {
+  background: url('../../images/add-to-favorite-icon.svg') center 100% no-repeat;
+}
+
+.savedToFavorite {
+  background: url('../../images/remove-from-favorite-icon.svg') center 100% no-repeat;
+}
+
+.titleAndPrice {
+  width: 100%;
+  min-height: 92px;
+  margin: 20px 0;
+}
+
+.price {
+  @extend %price;
+
+  &Discount {
+    color: $price-discount;
+    padding-right: 8px;
+  }
+
+  &Old {
+    @include Roboto400;
+    color: $price-old;
+    font-size: 16px;
+    line-height: 1.25;
+    position: relative;
+
+    &:before {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      right: 0;
+      left: 0;
+      content: '';
+      width: 100%;
+      height: 50%;
+      border-bottom: 1px solid $price-discount;
+      transform: rotate(-13deg);
+    }
+  }
+}
+
+.productTitle {
+  @extend %text;
+  width: 100%;
+  margin-top: 8px;
+
+  &:hover {
+    color: $text-hover;
+  }
+}
+
+.btnBuy {
+  @extend %button;
+  width: 156px;
+  height: 44px;
+  margin: 0 auto;
+  border-radius: 3px;
+  background-color: $btn-default;
+  transition: background-color 0.5s ease-in-out;
+  @include Roboto500;
+  color: white;
+  font-size: 16px;
+  line-height: 1.25;
+  letter-spacing: 0.1px;
+  text-align: center;
+
+  &:hover {
+    background-color: $btn-hover;
+  }
+
+  &:active {
+    background-color: $btn-active;
+  }
+}
+
+@include atTablet {
+  .card {
+    width: 334px;
+  }
+}

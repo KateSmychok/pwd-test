@@ -1,0 +1,58 @@
+@import '../../scss-styles/styles';
+
+.recommendedGoodsSection {
+  width: 100%;
+  padding: 72px 80px;
+  box-sizing: border-box;
+}
+
+.title {
+  @include Roboto400;
+  font-size: 24px;
+  line-height: 1.17;
+  color: $header-color;
+  margin: 0 0 24px;
+  padding: 0;
+}
+
+.cardsList {
+  margin: 0 auto;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, 305px);
+  gap: 20px;
+  justify-content: center;
+  list-style-type: none;
+  font-size: 0;
+}
+
+@media screen and (max-width: 1439px) {
+  .title {
+    width: 955px;
+    margin: 0 auto;
+  }
+
+  .cardsList {
+    gap: 20px 32px;
+  }
+}
+
+@media screen and (max-width: 1115px) {
+  .title {
+    width: 630px;
+  }
+}
+
+@include atTablet {
+  .recommendedGoodsSection {
+    padding: 72px 40px;
+  }
+
+  .title {
+    width: 688px;
+  }
+}
+
+
+
+
