@@ -1,0 +1,25 @@
+//медиазапросы
+@mixin atTablet {
+  @media screen and (max-width: 768px) {
+    @content;
+  }
+}
+
+@mixin atMobile {
+  @media screen and (max-width: 360px) {
+    @content;
+  }
+}
+
+//шрифты
+@mixin Roboto400 {
+  font-family: Roboto, 'Helvetica', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+}
+
+@mixin Roboto500 {
+  font-family: Roboto, 'Helvetica', sans-serif;
+  font-style: normal;
+  font-weight: 500;
+}

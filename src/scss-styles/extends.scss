@@ -1,0 +1,36 @@
+@import 'variables';
+@import 'mixins';
+
+//цена
+%price {
+  @include Roboto500;
+  font-size: 20px;
+  line-height: 1.2;
+  color: $price-color;
+  margin: 0;
+}
+
+//обычный текст
+%text {
+  @include Roboto400;
+  color: $text-default;
+  font-size: 16px;
+  line-height: 1.25;
+  margin: 0;
+  padding: 0;
+}
+
+//кнопка
+%button {
+  cursor: pointer;
+  outline-style: none;
+  border: none;
+  text-decoration: none;
+  text-align: center;
+  padding: 0;
+}
+
+//ссылка
+%link {
+  cursor: pointer;
+}
