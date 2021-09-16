@@ -1,12 +1,24 @@
 //медиазапросы
+@mixin atDesktopS {
+  @media screen and (max-width: 1439px) {
+    @content;
+  }
+}
+
 @mixin atTablet {
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 1092px) {
+    @content;
+  }
+}
+
+@mixin atMobileL {
+  @media screen and (max-width: 767px) {
     @content;
   }
 }
 
 @mixin atMobile {
-  @media screen and (max-width: 360px) {
+  @media screen and (max-width: 400px) {
     @content;
   }
 }

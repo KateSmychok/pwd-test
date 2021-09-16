@@ -9,7 +9,7 @@ import image4 from '../../images/goods/image-4.png';
 
 function CardsList() {
   return (
-    <section className={styles.recommendedGoodsSection}>
+    <section className={styles.section}>
       <h1 className={styles.title}>С этим товаром покупают</h1>
       <ul className={styles.cardsList}>
         <li>

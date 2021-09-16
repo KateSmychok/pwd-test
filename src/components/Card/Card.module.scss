@@ -5,10 +5,6 @@
   height: 416px;
   display: flex;
   flex-direction: column;
-
-  &:hover {
-    @extend %link;
-  }
 }
 
 .imageArea {
@@ -19,6 +15,10 @@
   position: relative;
   display: flex;
   justify-content: center;
+
+  &:hover {
+    @extend %link;
+  }
 }
 
 .image {
@@ -30,8 +30,8 @@
   width: 24px;
   height: 24px;
   position: absolute;
-  top: 0;
-  right: 0;
+  top: 20px;
+  right: 16px;
 }
 
 .notSavedToFavorite {
@@ -85,6 +85,7 @@
 
   &:hover {
     color: $text-hover;
+    @extend %link;
   }
 }
 
@@ -115,5 +116,11 @@
 @include atTablet {
   .card {
     width: 334px;
+  }
+}
+
+@include atMobile {
+  .card {
+    width: 320px;
   }
 }

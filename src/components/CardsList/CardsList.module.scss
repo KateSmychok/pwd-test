@@ -1,6 +1,6 @@
 @import '../../scss-styles/styles';
 
-.recommendedGoodsSection {
+.section {
   width: 100%;
   padding: 72px 80px;
   box-sizing: border-box;
@@ -26,26 +26,30 @@
   font-size: 0;
 }
 
-@media screen and (max-width: 1439px) {
-  .title {
-    width: 955px;
-    margin: 0 auto;
+@include atDesktopS {
+  .section {
+    padding-right: 5.55vw;
+    padding-left: 5.55vw;
   }
 
   .cardsList {
-    gap: 20px 32px;
+    gap: 32px 20px;
   }
-}
 
-@media screen and (max-width: 1115px) {
   .title {
-    width: 630px;
+    width: 955px;
+    margin: 0 auto 24px;
   }
 }
 
 @include atTablet {
-  .recommendedGoodsSection {
-    padding: 72px 40px;
+  .section {
+    padding-right: 40px;
+    padding-left: 40px;
+  }
+
+  .cardsList {
+    grid-template-columns: repeat(auto-fit, 334px);
   }
 
   .title {
@@ -53,6 +57,20 @@
   }
 }
 
+@include atMobileL {
+  .title {
+    width: 100%
+  }
+}
 
+@include atMobile {
+  .section {
+    padding-right: 20px;
+    padding-left: 20px;
+  }
 
-
+  .cardsList {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+}
